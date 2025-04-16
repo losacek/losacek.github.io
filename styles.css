@@ -15,3 +15,14 @@ p
 {
 font-size: 20px;
 }
+
+.seznam-flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.nested-container {
+    margin-left: 20px;
+    margin-top: 10px;
+}

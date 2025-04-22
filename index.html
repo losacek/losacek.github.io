@@ -2,43 +2,78 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
-  <title>Skládací seznam</title>
+  <title>Více skládacích seznamů s animací</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 2rem;
+      background-color: #f9f9f9;
     }
 
-    h2 {
+    .section {
+      margin-bottom: 1.5rem;
+    }
+
+    .toggle-title {
       cursor: pointer;
       background-color: #4a90e2;
       color: white;
       padding: 1rem;
       border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .toggle-title:hover {
+      background-color: #357ABD;
+    }
+
+    .toggle-list {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+      padding-left: 1.5rem;
+      background-color: #fff;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .toggle-list.show {
+      max-height: 300px; /* uprav podle délky obsahu */
+      padding-top: 1rem;
     }
 
     ul {
-      list-style-type: disc;
-      padding-left: 2rem;
-      display: none; /* skryto na začátku */
-      margin-top: 1rem;
+      margin: 0;
     }
   </style>
 </head>
 <body>
 
-  <h2 onclick="toggleList()">Klikni pro zobrazení seznamu</h2>
+  <div class="section">
+    <h2 class="toggle-title" onclick="toggleList(this)">Seznam 1</h2>
+    <div class="toggle-list">
+      <ul>
+        <li>Jablko</li>
+        <li>Banán</li>
+        <li>Pomeranč</li>
+      </ul>
+    </div>
+  </div>
 
-  <ul id="myList">
-    <li>Položka 1</li>
-    <li>Položka 2</li>
-    <li>Položka 3</li>
-  </ul>
+  <div class="section">
+    <h2 class="toggle-title" onclick="toggleList(this)">Seznam 2</h2>
+    <div class="toggle-list">
+      <ul>
+        <li>Pes</li>
+        <li>Kočka</li>
+        <li>Králík</li>
+      </ul>
+    </div>
+  </div>
 
   <script>
-    function toggleList() {
-      const list = document.getElementById("myList");
-      list.style.display = list.style.display === "none" || list.style.display === "" ? "block" : "none";
+    function toggleList(titleElement) {
+      const content = titleElement.nextElementSibling;
+      content.classList.toggle("show");
     }
   </script>
 

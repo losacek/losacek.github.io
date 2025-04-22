@@ -26,3 +26,51 @@ font-size: 20px;
     margin-left: 20px;
     margin-top: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>informace o mě</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href>
+
+
+</head>
+<body>
+<h1>
+   MOJE ZÁLIBY:
+</h1>
+   <p>
+<ul>
+<li>  Už od malička hraji videohry a šachy.</li>
+<li>Také se rád večer procházím. </li>
+<li>od 6 let se věnuji hasičině</li>
+</ul>
+
+
+
+
+</p>
+<div class="nested-container "> <h1>hry<h1>
+   <p>gknjm fghvbv kjnbvkjnfd jk</p>
+
+</div>
+<div class="obrazek"> </div>
+</body>
+
+</html>

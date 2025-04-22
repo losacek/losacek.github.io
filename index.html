@@ -1,31 +1,46 @@
-<html>
+<!DOCTYPE html>
+<html lang="cs">
 <head>
-<title>informace o mě</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href>
+  <meta charset="UTF-8">
+  <title>Skládací seznam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
 
+    h2 {
+      cursor: pointer;
+      background-color: #4a90e2;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+    }
 
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+      display: none; /* skryto na začátku */
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
-<h1>
-   MOJE ZÁLIBY:
-</h1>
-   <p>
-<ul>
-<li>  Už od malička hraji videohry a šachy.</li>
-<li>Také se rád večer procházím. </li>
-<li>od 6 let se věnuji hasičině</li>
-</ul>
 
+  <h2 onclick="toggleList()">Klikni pro zobrazení seznamu</h2>
 
+  <ul id="myList">
+    <li>Položka 1</li>
+    <li>Položka 2</li>
+    <li>Položka 3</li>
+  </ul>
 
+  <script>
+    function toggleList() {
+      const list = document.getElementById("myList");
+      list.style.display = list.style.display === "none" || list.style.display === "" ? "block" : "none";
+    }
+  </script>
 
-</p>
-<div class="nested-container "> <h1>hry<h1>
-   <p>gknjm fghvbv kjnbvkjnfd jk</p>
-
-</div>
-<div class="obrazek"> </div>
 </body>
-
 </html>

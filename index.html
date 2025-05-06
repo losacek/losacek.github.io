@@ -9,7 +9,6 @@
   transition: background-color 0.3s;
 }
 
-/* Tmavý režim – pouze pozadí */
 body.dark-mode {
   background-color: #121212;
 }
@@ -26,7 +25,7 @@ body.dark-mode {
     .toggle-title {
       width: 50%;
       margin: 0 auto;
-      text-align: right;
+      text-align: center;
       cursor: pointer;
       background-color: #4a90e2;
       color: white;
@@ -59,14 +58,11 @@ body.dark-mode {
 h1 {
 color: #4a90e2;
 text-align: center;
-text-decoration-line: underline;
-  text-decoration-color: #4a90e2;
-  text-decoration-style: wavy;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .nadpis{
   color:#4a90e2;
-  text-align: left;
+  text-align: center;
   font-size: 4rem;
 }
   </style>
@@ -87,7 +83,7 @@ text-decoration-line: underline;
       content.classList.toggle("show");
     }
   
-    // Přepínač pouze pro pozadí
+    
     document.getElementById("darkModeToggle").addEventListener("click", function () {
       document.body.classList.toggle("dark-mode");
     });

@@ -72,13 +72,27 @@ text-decoration-line: underline;
   </style>
 </head>
 <body>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   <button id="darkModeToggle">Tmavý režim</button>
-
-
-
-
-
-<h1>
+ <script>
+    function toggleList(titleElement) {
+      const content = titleElement.nextElementSibling;
+      content.classList.toggle("show");
+    }
+  
+    // Přepínač pouze pro pozadí
+    document.getElementById("darkModeToggle").addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+  <h1>
 Ahoj, jsem Matěj chodim na střední školu obor informační technologie, ale mimo IT mám také jiné zájmy
 
 </h1>

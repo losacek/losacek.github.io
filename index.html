@@ -5,6 +5,15 @@
   <title>informace o mě</title>
   <style>
     body {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+/* Tmavý režim – pouze pozadí */
+body.dark-mode {
+  background-color: #121212;
+}
+    body {
       font-family: Arial, sans-serif;
       padding: 2rem;
       background-color: #f9f9f9;
@@ -17,7 +26,7 @@
     .toggle-title {
       width: 50%;
       margin: 0 auto;
-      text-align: center;
+      text-align: right;
       cursor: pointer;
       background-color: #4a90e2;
       color: white;
@@ -53,15 +62,22 @@ text-align: center;
 text-decoration-line: underline;
   text-decoration-color: #4a90e2;
   text-decoration-style: wavy;
-  font-size: 1rem;
+  font-size: 2rem;
 }
-.nadpisy{
+.nadpis{
   color:#4a90e2;
   text-align: left;
+  font-size: 4rem;
 }
   </style>
 </head>
 <body>
+  <button id="darkModeToggle">Tmavý režim</button>
+
+
+
+
+
 <h1>
 Ahoj, jsem Matěj chodim na střední školu obor informační technologie, ale mimo IT mám také jiné zájmy
 
@@ -116,6 +132,17 @@ Ahoj, jsem Matěj chodim na střední školu obor informační technologie, ale 
       content.classList.toggle("show");
     }
   </script>
-
+<div class="nadpis">
+cíle do budoucna/plány
+  </div>
+  <h1>
+    Do budoucna bych se chtěl naučit python, zlepšit se v šachách(možná získat oficiální rating), zlepšit se na hasičích a začít posilovat, dále bych chtěl začít chodit na brigády, abych si vydělal na počítač.
+  </h1>
+  <div class="nadpis">
+    
+  </div>
+  <h1>
+  
+  </h1>
 </body>
 </html>

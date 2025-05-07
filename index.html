@@ -5,16 +5,27 @@
   <title>informace o mě</title>
   <style>
     body {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+}
+    body {
       font-family: Arial, sans-serif;
       padding: 2rem;
       background-color: #f9f9f9;
     }
 
     .section {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .toggle-title {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
       cursor: pointer;
       background-color: #4a90e2;
       color: white;
@@ -47,16 +58,37 @@
 h1 {
 color: #4a90e2;
 text-align: center;
-text-decoration-line: underline;
-  text-decoration-color: #4a90e2;
-  text-decoration-style: wavy;
   font-size: 1rem;
 }
-
+.nadpis{
+  color:#4a90e2;
+  text-align: center;
+  font-size: 4rem;
+}
   </style>
 </head>
 <body>
-<h1>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <button id="darkModeToggle">Tmavý režim</button>
+ <script>
+    function toggleList(titleElement) {
+      const content = titleElement.nextElementSibling;
+      content.classList.toggle("show");
+    }
+  
+    
+    document.getElementById("darkModeToggle").addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+  <h1>
 Ahoj, jsem Matěj chodim na střední školu obor informační technologie, ale mimo IT mám také jiné zájmy
 
 </h1>
@@ -110,6 +142,22 @@ Ahoj, jsem Matěj chodim na střední školu obor informační technologie, ale 
       content.classList.toggle("show");
     }
   </script>
-
+<div class="section">
+<div class="nadpis">
+cíle do budoucna/plány
+  </div>
+  </div>
+  <div class="section">
+  <h1>
+    Do budoucna bych se chtěl naučit python,<div class="section"><br></div> zlepšit se v šachách(možná získat oficiální rating), 
+    zlepšit se na hasičích a začít posilovat,<div class="section"><br></div>dále bych chtěl začít chodit na brigády, abych si vydělal na počítač.
+  </h1>
+</div>
+  <div class="nadpis">
+    
+  </div>
+  <h1>
+  
+  </h1>
 </body>
 </html>
